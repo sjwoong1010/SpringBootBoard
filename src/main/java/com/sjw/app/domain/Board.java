@@ -28,6 +28,4 @@ public class Board {
 
     @OneToOne(fetch = FetchType.LAZY)
     private User user;
-
-
 }
