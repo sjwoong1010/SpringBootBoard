@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.apache.catalina.User;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -27,6 +28,9 @@ public class Board {
 
     private LocalDateTime createdDate;
     private LocalDateTime updatedDate;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    private User user;
 
 
 }
